@@ -1,0 +1,138 @@
+@import url('//fonts.googleapis.com/earlyaccess/jejugothic.css');
+:root{
+    --gold :#e2a514e9;
+    --white:white;
+    --black:black;
+    --orange:#fbc607;
+}
+body{
+    font-family: 'Jeju Gothic',sans-serif;
+    position: relative;
+}
+.cs-bg-black{
+    background-color: var(--black);
+}
+
+#topCarousel .carousel-item:nth-of-type(1){
+    background: url(../img/carousel_01.jpg) no-repeat center / cover;
+    height: 100vh;
+}
+#topCarousel .carousel-item:nth-of-type(2){
+    background: url(../img/carousel_02.jpg) no-repeat center / cover;
+    height: 100vh;
+}
+#topCarousel .carousel-item:nth-of-type(3){
+    background: url(../img/carousel_03.jpg) no-repeat center / cover;
+    height: 100vh;
+}
+/* 캐로셀 안의 캡션 대신에 넣은 이미지 위치 맞추기 */
+#topCarousel .carousel-caption{
+    position: absolute;
+}
+#topCarousel .carousel-item:nth-of-type(1) .carousel-caption{
+    bottom:-50px
+}
+#topCarousel .carousel-item:nth-of-type(3) .carousel-caption{
+    bottom:-70px
+}
+/* 제품 이미지 부각시키기 위해 캐로셀 배경 어둡게 처리 */
+#topCarousel .carousel-item::after{
+    content:"";
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.5;
+}
+/* 캐로셀 좌우 버튼을 호버시 나타나도록 설정 */
+#topCarousel .carousel-control-prev{
+    left:-200px;
+}
+#topCarousel:hover .carousel-control-prev{
+    left:0;
+    transition:left 1s;
+    color:var(--gold);
+}
+#topCarousel .carousel-control-next{
+    right:-200px;
+}
+#topCarousel:hover .carousel-control-next{
+    right:0;
+    transition:right 1s;
+    color:var(--gold);
+}
+#topCarousel{
+    overflow: hidden;
+}
+#topCarousel .carousel-indicators .active{
+    background-color:var(--gold);
+}
+/* 로딩 이미지 스타일 */
+.loading{
+    height: 100vh;
+}
+.loading img{
+    width: 200px;
+}
+/* 네브바의 높이 스타일 */
+.navbar-nav{
+    padding-top:20px;
+    padding-bottom:20px;
+}
+
+/* section#secret 진한 맛의 비밀 배경 이미지 */
+section#secret{
+    background: url(../img/menu3_about_bg.jpg) center;
+    background-attachment: fixed;
+}
+/* section#cf 동영상 배경 이미지 */
+section#cf{
+    background: url(../img/menu4_background_bg.jpg) center /cover fixed;
+}
+
+/* 카드 캐로셀의 타이틀 아래 선 스타일 */
+.card-text>h6::after{
+    content:"";
+    width: 100%;
+    height: 4px;
+    background-color: var(--orange);
+}
+
+/* section#contact  배경 이미지 */
+section#contact{
+    background: url(../img/menu7_background_bg.jpg) center /cover fixed;
+    padding:100px
+}
+.was-validated .form-control:valid, .form-control.is-valid {
+    border:1px solid rgba(0,0,0,.125) !important
+}
+/* form의 스타일 */
+#query .form-control{
+    background-color: transparent;
+    border:1px solid rgba(0,0,0,.125) !important
+}
+select{
+    background-color: transparent !important;
+    border:1px solid rgba(0,0,0,.125) !important
+}
+.input-group-text{
+    background-color: transparent !important;
+    border:1px solid rgba(0,0,0,.125) !important
+}
+.text-white{
+    color:white !important
+}
+.form-control::placeholder{
+    color:white !important
+}
+.form-control{
+    color:white !important 
+}
+
+/* waypoint 플러그인과 결합해서 스타일 생성 */
+.wp1, .wp2, .wp3, .wp4, .wp5, .wp6, .wp7, .wp8, .wp9, .wp10, .wp11, .wp12, .wp13, .wp14,.wp15, .wp16, .wp17{
+    visibility: hidden;
+}  
+.animate__animated{
+    visibility: visible;
+}
